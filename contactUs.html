@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>צור קשר - Sweet Symphony</title>
+    <link rel="stylesheet" href="styles/myStyle.css">
+</head>
+<body>
+    <header>
+        <h1>Sweet Symphony</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">בית</a></li>
+                <li><a href="about.html">אודות</a></li>
+                <li><a href="content1.html">היסטוריה</a></li>
+                <li><a href="content2.html">סדנאות ומתכונים</a></li>
+                <li><a href="contactUs.html">צור קשר</a></li>
+                <li><a href="siteMap.html">מפת אתר</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="breadcrumb">
+            <a href="index.html">בית</a> > צור קשר
+        </section>
+
+        <section class="content-section">
+            <h2>צור קשר</h2>
+            <p>נשמח לשמוע מכם! אנא מלאו את הטופס מטה ונחזור אליכם בהקדם.</p>
+
+            <form action="#" method="post">
+                <label for="name">שם מלא:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">אימייל:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">הודעה:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">שלח הודעה</button>
+            </form>
+
+            <p class="confirmation" style="display:none;">תודה! הודעתך נשלחה בהצלחה.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Sweet Symphony - כל הזכויות שמורות.</p>
+    </footer>
+
+    <script>
+        // הצגת חיווי לאחר שליחת טופס
+        document.querySelector("form").addEventListener("submit", function(e) {
+            e.preventDefault();
+            document.querySelector(".confirmation").style.display = "block";
+        });
+    </script>
+</body>
+</html>
